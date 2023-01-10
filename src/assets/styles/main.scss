@@ -18,8 +18,24 @@
 // App
 .app-main {
     height: 100vh;
-    overflow-x: hidden;
+
+    @include flex-vertically-center;
+    flex-direction: column;
+    
     position: relative;
+    overflow-x: hidden;
+    
+    > *:not(.addon-shape) {
+        @include flex-vertically-center;
+        &:not(header, footer) {
+            flex-direction: column;
+        }
+        // flex-direction: column;
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
     .wave {
         position: absolute;
         top: 0;

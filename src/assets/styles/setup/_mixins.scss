@@ -57,8 +57,15 @@
     }
   }
 
-//   Helpers mixins:
+// Helpers mixins:
 @mixin flex-vertically-center {
     display: flex;
     align-items: center;
+}
+
+// Custom style mixins:
+@mixin custom-btn {
+    @include flex-vertically-center;
+    background-color: $btn-grad;
+
 }

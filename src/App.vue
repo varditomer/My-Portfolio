@@ -1,7 +1,7 @@
 <template>
   <section class="app-main">
 
-    <img class="wave" src="./assets/imgs/background-wave-element.png" alt="">
+    <img class="addon-shape wave" src="./assets/imgs/background-wave-element.png" alt="">
     <!-- <app-header /> -->
 
     <!-- <router-view /> -->
@@ -65,7 +65,7 @@
           in dolor. Praesent mi velit in id hac platea leo vulputate.
         </p>
 
-        <button class="more-details">
+        <button class="custom-btn more-details">
           <span class="btn-txt">Learn more</span>
         </button>
 
@@ -84,7 +84,7 @@
           in dolor. Praesent mi velit in id hac platea leo vulputate.
         </p>
 
-        <button class="more-details">
+        <button class="custom-btn more-details">
           <span class="btn-txt">Learn more</span>
         </button>
 
@@ -101,7 +101,7 @@
           in dolor. Praesent mi velit in id hac platea leo vulputate.
         </p>
 
-        <button class="more-details">
+        <button class="custom-btn more-details">
           <span class="btn-txt">Learn more</span>
         </button>
 
@@ -263,7 +263,7 @@
           </li>
 
           <li class="contact-opt">
-            <button class="contact-me"><span>Contact</span></button>
+            <button class="custom-btn contact-me"><span>Contact</span></button>
           </li>
 
         </ul>

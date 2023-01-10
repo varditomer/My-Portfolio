@@ -1,11 +1,25 @@
 // Font Sizes
-.fs12 { font-size: rem(12px); }
-.fs14 { font-size: rem(14px); }
-.fs18 { font-size: rem(18px); }
-.fs20 { font-size: rem(20px); }
-.fs24 { font-size: rem(24px); }
-.fs28 { font-size: rem(28px); }
-.fs30 { font-size: rem(30px); }
+.fs12 {
+    font-size: rem(12px);
+}
+.fs14 {
+    font-size: rem(14px);
+}
+.fs18 {
+    font-size: rem(18px);
+}
+.fs20 {
+    font-size: rem(20px);
+}
+.fs24 {
+    font-size: rem(24px);
+}
+.fs28 {
+    font-size: rem(28px);
+}
+.fs30 {
+    font-size: rem(30px);
+}
 
 .text-center {
     text-align: center;
@@ -13,7 +27,6 @@
 // flex helpers
 
 .flex {
-
     display: flex;
 
     > *.full {
@@ -40,4 +53,17 @@
 }
 .portrait-ratio {
     @include aspect-ratio(9, 16);
+}
+
+// Custom elements:
+
+.custom-btn {
+    background: $btn-grad;
+    height: 55px;
+    width: 204px;
+    border: unset;
+    border-radius: 10px;
+    color: $clr--white;
+    font-family: Quicksand-Medium;
+    font-size: rem(30px);
 }
