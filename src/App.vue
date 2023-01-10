@@ -6,7 +6,7 @@
 
     <!-- <router-view /> -->
 
-    <header class="app-header">
+    <header class="app-header" aria-label="welcome to my portfolio - here you can nav to the part that you want">
       <div class="logo">
         <span class="txt">COMPANY</span>
         <img src="../src/assets/imgs/portfolio_logo.png" alt="" class="logo-img">
@@ -29,9 +29,9 @@
     </header>
 
 
-    <section class="introduction">
+    <section class="introduction" aria-labelledby="sectionTitle">
 
-      <h2 class="section-title">Introduction</h2>
+      <h2 id="sectionTitle" class="section-title">Introduction</h2>
       
       <p class="section-intro">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi ultricies habitant eget volutpat ut aenean in
@@ -46,8 +46,8 @@
 
     </section>
 
-    <section class="projects">
-      <h2 class="section-title">Projects</h2>
+    <section class="projects" aria-labelledby="sectionTitle">
+      <h2 id="sectionTitle" class="section-title">Projects</h2>
       <p class="section-intro">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
@@ -111,9 +111,9 @@
 
     </section>
 
-    <section class="technologies">
+    <section class="technologies" aria-labelledby="sectionTitle">
 
-      <h2 class="section-title">Technologies</h2>
+      <h2 id="sectionTitle" class="section-title">Technologies</h2>
 
       <p class="section-intro">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi ultricies habitant eget volutpat ut aenean in
@@ -193,9 +193,9 @@
 
     </section>
 
-    <section class="about">
+    <section class="about" aria-labelledby="sectionTitle">
 
-      <h2 class="section-title">About me</h2>
+      <h2 id="sectionTitle" class="section-title">About me</h2>
 
       <p class="section-intro">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi ultricies habitant eget volutpat ut aenean in
@@ -249,7 +249,7 @@
 
     </section>
 
-    <footer class="contact">
+    <footer class="contact" aria-label="contact options">
 
       <section class="contact-details">
         <ul class="contact-opts">
