@@ -1,19 +1,36 @@
 header {
-    background-color: $clr5;
-    padding: 10px;    
     @include flex-vertically-center;
     justify-content: space-between;
+    height: 15vh;
+    padding-left: $pdl;
+    // padding-right: ;
+    .logo {
+        @include flex-vertically-center;
+        // height: 100%;
+        img {
+            // height: 50%;
+        }
+        span {
+            font-size: rem(30px);
+            margin-left: 12px;
+            font-family: JosefinSans-Bold;
+        }
+    }
     nav {
         @include flex-vertically-center;
         justify-content: space-between;
         padding: 5px 0;
+        >* {
+            font-family: JosefinSans-Regular;
+            color: $clr--white;
+            font-size: rem(40px);
+        }
     }
     nav a:not(:first-child) {
         padding: 0 5px;
         margin: 10px;
     }
     .router-link-active {
-        background-color: salmon;
+        text-decoration: underline salmon;
     }
-    
 }

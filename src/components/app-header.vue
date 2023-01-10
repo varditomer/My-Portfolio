@@ -1,9 +1,11 @@
 <template>
   <header>
-    <router-link to="/">
-      <span role="img" aria-label="logo">🏠</span>
-    </router-link>
+    <div class="logo">
+      <img src="../assets/imgs/portfolio_logo.png" alt="">
+      <span>PORTFOLIO</span>
+    </div>
     <nav>
+      <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
     </nav>
   </header>

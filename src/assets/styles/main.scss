@@ -9,13 +9,29 @@
 @import "basics/layout";
 @import "basics/base";
 
-
 // Views
-
 
 // Components
 @import "components/app-header";
 @import "components/user-msg";
 
+// App
+.app-main {
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    .wave {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        // height: calc(827/1955)*100vh;
+        // width: calc(1130/1920)*100vw;
+        // max-height: 50%;
+        // width: 45%;
 
-
+        aspect-ratio: 1/1;
+        border-radius: 0px;
+        z-index: -1;
+    }
+}
