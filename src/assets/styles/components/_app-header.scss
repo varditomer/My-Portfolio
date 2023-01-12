@@ -1,4 +1,37 @@
 header {
     @include flex-vertically-center;
     justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    margin-bottom: 150px;
+    .logo {
+        @include flex-vertically-center;
+        font-size: rem(60px);
+        color: $clr--black;
+        span {
+            @include flex-vertically-center;
+            text-transform: uppercase;
+            font-family: JosefinSans-Bold, sans-serif;
+            margin-inline-end: 10px
+        }
+    }
+    
+    
+    .main-nav {
+        @include flex-vertically-center;
+        gap: 100px;
+        font-family: JosefinSans-Regular, sans-serif;
+    }
+    .nav-list {
+        gap: 40px;
+        >* {
+            cursor: pointer;
+        }
+        a {
+            color: $clr--white;
+            &:visited {
+                text-decoration: none;
+                color: $clr--white;
+            }
+        }
+    }
 }

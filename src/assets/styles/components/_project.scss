@@ -1,0 +1,58 @@
+.projects {
+    .projects-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 50px;
+    }
+    .projects-content > *:nth-child(even) {
+        justify-self: center;
+    }
+    .even-section {
+        padding-top: 456px;
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-evenly;
+        gap: 80px;
+    }
+    .odd-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 80px;
+    }
+}
+.project-card {
+    position: relative;
+    flex-direction: column;
+    @include flex-vertically-center;
+    justify-content: space-between; 
+    border: 1px solid gray;
+    width: 90%;
+    max-height: 912px;
+    border-radius: 25px;
+    box-shadow: $card-shadow;
+    padding: 0 20px;
+    gap: 18px;
+    .project-img {
+        height: 40%;
+        object-fit: cover;
+    }
+    .project-title {
+        align-self: start;
+        font-size: rem(50px);
+    }
+    .project-description {
+        max-height: 300px;
+        display: -webkit-box;
+        -webkit-line-clamp: 6; /*define how many line you want to show */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 18px;
+    }
+    .more-details {
+        align-self: flex-start;
+        margin-bottom: 36px;
+    }
+}

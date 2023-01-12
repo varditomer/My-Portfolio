@@ -13,41 +13,60 @@
 
 // Components
 @import "components/app-header";
+@import "components/introduction";
+@import "components/project";
+@import "components/technologies";
+@import "components/about-me";
+@import "components/contact-me";
 @import "components/user-msg";
 
 // App
-.app-main {
+.main-layout {
     height: 100vh;
 
     @include flex-vertically-center;
     flex-direction: column;
     
     position: relative;
-    overflow-x: hidden;
+    overflow-y: auto;
+
+    >*:not(.full) {
+        padding: 0 100px;
+    }
     
-    > *:not(.addon-shape) {
-        @include flex-vertically-center;
-        &:not(header, footer) {
-            flex-direction: column;
+    .main-content {
+        height: 100vh;
+        >*:not(.full) {
+            padding: 0 100px;
         }
-        // flex-direction: column;
+        gap: 100px;
+    }
+    
+    .app-header {
+        padding: 55px 50px 55px 100px;
+    }
+    
+    >*:not(.addon-shape) {
+        display: grid;
+        grid-auto-flow: column;
         width: 100%;
-        padding-left: 5%;
-        padding-right: 5%;
+        &:not(header) {
+            grid-auto-flow: row;
+        }
     }
 
     .wave {
         position: absolute;
         top: 0;
         right: 0;
-        height: 100%;
-        // height: calc(827/1955)*100vh;
-        // width: calc(1130/1920)*100vw;
-        // max-height: 50%;
-        // width: 45%;
-
+        width: calc((1130/1920)*100vw);
+        height: calc((827/1080)*100vh);
+        
         aspect-ratio: 1/1;
         border-radius: 0px;
         z-index: -1;
+    }
+
+    .addon-shape {
     }
 }

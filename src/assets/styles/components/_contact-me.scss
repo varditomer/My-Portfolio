@@ -1,0 +1,57 @@
+.contact-me {
+    @include flex-vertically-center;
+    flex-direction: column;
+    > * {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .contact-opts {
+        background-color: $clr1;
+        @include flex-vertically-center;
+        justify-content: center;
+        width: 100%;
+        gap: 30px;
+        h5 {
+            font-family: JosefinSans-SemiBold, sans-serif;
+            color: $clr--white;
+            margin-bottom: 2px;
+        }
+        span {
+            font-family: JosefinSans-Thin, sans-serif;
+            color: $clr--white;
+            font-size: rem(20px);
+            
+        }
+        .contact-opt {
+            @include flex-vertically-center;
+            flex-direction: column;
+        }
+        .contact-me-btn {
+            span {
+                margin-inline-start: 10px;
+            }
+        }
+    }
+    .bottom {
+        background-color: $clr2;
+        @include flex-vertically-center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        // min-height: 385px;
+        .social-links {
+            @include flex-vertically-center;
+            gap: 30px;
+            >*:hover {
+                a {
+                    fill: blue;
+                }
+            }
+        }
+        .copy-rights {
+            color: $clr--white;
+            font-size: rem(20px);
+        }
+    }
+}

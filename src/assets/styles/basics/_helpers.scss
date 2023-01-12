@@ -58,12 +58,15 @@
 // Custom elements:
 
 .custom-btn {
+    @include flex-vertically-center;
+    justify-content: center;
     background: $btn-grad;
-    height: 55px;
-    width: 204px;
     border: unset;
     border-radius: 10px;
     color: $clr--white;
     font-family: Quicksand-Medium;
+    height: 55px;
+    width: 204px;
     font-size: rem(30px);
+    cursor: pointer;
 }

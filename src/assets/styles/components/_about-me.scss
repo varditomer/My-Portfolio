@@ -1,0 +1,66 @@
+.about {
+    padding: 0 20px;
+    .intro {
+        @include flex-vertically-center;
+        margin-bottom: 65px;
+        .section-intro {
+            margin: 0;
+        }
+        .my-img-container {
+            @include flex-vertically-center;
+            justify-content: center;
+            position: relative;
+            width: 50%;
+            .container {
+                @include flex-vertically-center;
+                background: $btn-grad;
+                border-radius: 4em;
+                padding: 2px;
+            }
+        }
+    }
+    .time-line-container {
+        @include flex-vertically-center;
+        flex-direction: column;
+        position: relative;
+        .time-line {
+            @include flex-vertically-center;
+        }
+        .time-line-fill {
+            background-color: $clr2;
+            height: 6px;
+            position: absolute;
+            top: 48px;
+            width: calc(100% - 20px);
+        }
+
+        .milestone {
+            @include flex-vertically-center;
+            flex-direction: column;
+            text-align: center;
+            .milestone-date-container {
+                @include flex-vertically-center;
+                justify-content: center;
+                position: relative;
+                .dot {
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    background-color: $clr2;
+                    border-radius: 50%;
+                    bottom: -21px;
+                    // right: 12px;
+                    z-index: 15;
+                }
+            }
+            .milestone-txt {
+                padding: 30px 10px 0;
+                font-family: JosefinSans-SemiBold, serif;
+                font-size: rem(30px);
+                
+            }
+        }
+    }
+
+
+}
