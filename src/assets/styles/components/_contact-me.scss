@@ -1,9 +1,10 @@
 .contact-me {
+    max-height: 30vh;
     @include flex-vertically-center;
     flex-direction: column;
     > * {
         width: 100%;
-        padding: 20px 0;
+        padding: 15px 0;
     }
 
     .contact-opts {
@@ -12,25 +13,18 @@
         justify-content: center;
         width: 100%;
         gap: 30px;
-        h5 {
-            font-family: JosefinSans-SemiBold, sans-serif;
-            color: $clr--white;
-            margin-bottom: 2px;
-        }
-        span {
-            font-family: JosefinSans-Thin, sans-serif;
-            color: $clr--white;
-            font-size: rem(20px);
-            
-        }
         .contact-opt {
             @include flex-vertically-center;
             flex-direction: column;
-        }
-        .contact-me-btn {
-            span {
-                margin-inline-start: 10px;
+            >* {
+                cursor: pointer;
             }
+            .contact-opt-content {
+                font-family: Jost-SemiBold, sans-serif;
+                color: $clr--white;
+                font-size: rem(18px);
+            }
+            
         }
     }
     .bottom {
@@ -38,14 +32,36 @@
         @include flex-vertically-center;
         flex-direction: column;
         justify-content: center;
-        gap: 30px;
-        // min-height: 385px;
+        gap: 10px;
         .social-links {
             @include flex-vertically-center;
             gap: 30px;
-            >*:hover {
-                a {
-                    fill: blue;
+            > * {
+                > * {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            > *:hover {
+                a.linkedin,
+                a.facebook {
+                    border-radius: 2em;
+                    background-color: white;
+                    outline: 6px solid $clr2;
+                    outline-offset: -5px;
+                }
+                a.linkedin > * {
+                    fill: rgb(10, 123, 186);
+                }
+                a.facebook {
+                    fill: rgb(24, 119, 242);
+                }
+                a.github > * {
+                    fill: lightgray;
+                    background-color: $clr2;
+                    border-radius: 2em;
+                    // outline: 6px solid black;
+                    //     outline-offset: -5px;
                 }
             }
         }

@@ -13,9 +13,9 @@ html {
 
 body {
     margin: 0;
-    font-size: rem(40px);
+    font-size: rem(30px);
     color: $clr-primary;
-    // line-height: 1.25;
+    // line-height: 1;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,10 +34,6 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
 ul {
     margin: 0;
     padding: 0;
@@ -45,13 +41,13 @@ ul {
 }
 
 ::-webkit-scrollbar {
-    width: 30px;
+    width: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: gray;
     border-radius: 20px;
-    outline: 0.5px solid darkblue;
+    // outline: 0.5px solid darkblue;
 }
 
 // section styles:
@@ -62,6 +58,6 @@ section {
         
     }
     .section-intro {
-        margin-bottom: 65px;
+        margin-bottom: 45px;
     }
 }
