@@ -1,39 +1,162 @@
 .app-header {
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-    padding: 30px 15px 30px 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 30px 15px 30px 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
     height: 12.5vh;
     .logo {
         display: flex;
         align-items: center;
         color: $clr--black;
         cursor: default;
-        div {
-            margin: 0;
-            padding: 0;
-            font-size: rem(60px);
+        .txt {
+            font-size: rem(40px);
             text-transform: uppercase;
             font-family: Jost-Bold, sans-serif;
             margin-inline-end: 10px;
         }
     }
     .main-nav {
-        width: calc((1130 / 1920) * 100vw - 20px);
-    }
-    .nav-list {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-
-        a,
-        a:visited {
-            color: $clr--white;
-            text-transform: uppercase;
-        }
-        a:hover {
-            color: $clr2;
+        .nav-list {
+            display: none;
         }
     }
 }
+
+@include for-small-layout {
+    .app-header {
+        padding-left: 20px;
+        .logo {
+            .txt {
+                font-size: rem(50px);
+            }
+        }
+    }
+}
+
+@include for-medium-layout {
+    .app-header {
+        padding-left: 50px;
+        .logo {
+            .txt {
+                font-size: rem(60px);
+            }
+        }
+        .main-nav {
+            width: calc((1130 / 1920) * 100vw - 20px);
+            .menu {
+                display: none;
+            }
+            .nav-list {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                > * {
+                    text-align: right;
+                }
+
+                a,
+                a:visited {
+                    font-size: rem(22px);
+                    color: $clr--white;
+                    text-transform: uppercase;
+                }
+                a:hover {
+                    color: $clr2;
+                }
+            }
+        }
+    }
+}
+
+@include for-large-layout {
+    .app-header {
+        padding-left: 100px;
+        .main-nav {
+            .nav-list {
+                a,
+                a:visited {
+                    font-size: inherit;
+                }
+            }
+        }
+    }
+}
+
+// .app-header {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding: 30px 15px 30px 10px;
+//     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+//     height: 12.5vh;
+//     .logo {
+//         display: flex;
+//         align-items: center;
+//         color: $clr--black;
+//         cursor: default;
+//         div {
+//             margin: 0;
+//             padding: 0;
+//             font-size: rem(60px);
+//             text-transform: uppercase;
+//             font-family: Jost-Bold, sans-serif;
+//             margin-inline-end: 10px;
+//         }
+//     }
+//     .main-nav {
+//         width: calc((1130 / 1920) * 100vw - 20px);
+//         // background-color: #177ae7;
+//     }
+//     .nav-list {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         gap: 40px;
+//         > * {
+//             text-align: right;
+//         }
+
+//         a,
+//         a:visited {
+//             color: $clr--white;
+//             text-transform: uppercase;
+//         }
+//         a:hover {
+//             color: $clr2;
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 1000px) {
+//     .main-layout {
+//         .app-header {
+//             padding: 20px 15px 20px 60px;
+//             .main-nav {
+//                 // width: 100%;
+//                 // padding-right: 150px;
+//                 position: absolute;
+//                 top: 0;
+//                 // top: 133px;
+//                 right: 15px;
+//                 // background-color: black;
+//                 .nav-list {
+//                     display: flex;
+//                     flex-direction: column;
+//                     justify-content: center;
+//                     // gap: 40px;
+//                     > * {
+//                         text-align: right;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     .main-content {
+//         >*:not(.full){
+//             padding: 0 60px 0 60px !important;
+//         }
+
+//     }
+// }

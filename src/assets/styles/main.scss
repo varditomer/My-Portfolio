@@ -21,56 +21,73 @@
 
 // App
 .main-layout {
-    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     overflow-x: hidden;
     overflow-y: overlay;
-    position: relative;
-
-    display: grid;
+    height: 100vh;
 
     .main-content {
-        // background-color: rgba(255, 255, 0, 60%);
-        >*:not(.full){
-            padding: 0 100px 0 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        > *:not(.full) {
+            padding: 0 10px 0 10px;
         }
-        
     }
-
     .wave {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: calc((1130 / 1920) * 100vw);
-        height: calc((827 / 1080) * 100vh);
-
-        // aspect-ratio: 1/1;
-        border-radius: 0px;
-        z-index: -1;
+        display: none;
     }
+
 }
 
-@media screen and (max-width: 1000px) {
+@include for-small-layout {
     .main-layout {
-        .app-header {
-            padding: 20px 15px 20px 60px;
-            .main-nav {
-                // width: 100%;
-                // padding-right: 150px;
-                position: absolute;
-                top: 0;
-                // top: 133px;
-                right: 15px;
-                // background-color: black;
-                .nav-list {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    // gap: 40px;
-                    > * {
-                        text-align: right;
-                    }
-                }
+        .main-content {
+            > *:not(.full) {
+                padding: 0 20px 0 20px;
             }
         }
     }
 }
+
+@include for-medium-layout {
+    .main-layout {
+        .main-content {
+            > *:not(.full) {
+                padding: 0 50px 0 50px;
+            }
+        }
+        .wave {
+            display: inherit;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: calc((1130 / 1920) * 100vw);
+            height: calc((827 / 1080) * 100vh);
+            border-radius: 0px;
+            z-index: -1;
+        }
+    }
+}
+
+@include for-large-layout {
+    .main-layout {
+        .main-content {
+            > *:not(.full) {
+                padding: 0 100px 0 100px;
+            }
+        }
+    }
+}
+
+
+// @include for-small-layout {
+// }
+
+// @include for-medium-layout {
+// }
+
+// @include for-large-layout {
+// }

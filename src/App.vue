@@ -2,6 +2,7 @@
   <section class="main-layout">
 
     <app-header />
+
     <div class="main-content full">
       <introduction />
       <projects />
@@ -9,10 +10,9 @@
       <about />
       <contact />
     </div>
-    
+
     <img class="addon-shape wave full" src="./assets/imgs/background-wave-element.png" alt="">
 
-    <user-msg />
   </section>
 </template>
 
@@ -28,10 +28,6 @@ import contact from './components/contact.vue'
 import userMsg from './components/user-msg.vue'
 
 export default {
-
-  created() {
-    console.log('Vue App created')
-  },
   components: {
     appHeader,
     introduction,

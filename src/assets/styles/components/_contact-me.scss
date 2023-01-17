@@ -1,5 +1,5 @@
 .contact-me {
-    // height: 30vh;
+    height: 30vh;
     @include flex-vertically-center;
     flex-direction: column;
     > * {
@@ -25,9 +25,6 @@
                 color: $clr--white;
                 font-size: rem(18px);
             }
-            // .icon {
-            //     transform: translate(60deg);
-            // }
             .icon {
                 &:hover {
                     animation: spin 2.5s infinite;
@@ -39,11 +36,12 @@
     }
 
     .bottom {
-        background-color: $clr2;
         @include flex-vertically-center;
         flex-direction: column;
         justify-content: center;
+        text-align: center;
         gap: 10px;
+        background-color: $clr2;
         .social-links {
             @include flex-vertically-center;
             gap: 30px;

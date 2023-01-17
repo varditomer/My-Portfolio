@@ -5,6 +5,7 @@
       <img src="../assets/imgs/lines.png" alt="" class="logo-img">
     </div>
     <nav class="main-nav">
+      <button class="menu">hum</button>
       <ul class="nav-list">
         <li><a href="#projects">Projects</a></li>
         <li><a href="#technologies">Technologies</a></li>

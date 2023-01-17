@@ -1,25 +1,45 @@
 .technologies {
     height: 100vh;
-    // @include flex-vertically-center;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
-    // justify-content: space-evenly;
-
     .main-techs-list {
         @include flex-vertically-center;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 60px;
+        gap: 30px;
         a {
             @include flex-vertically-center;
             img {
-                height: 120px;
-                width: 120px;
+                height: 60px;
+                width: 60px;
             }
-            > * {
-                &:hover {
-                    animation: blink 0.8s infinite;
+        }
+    }
+}
+
+@include for-small-layout {
+    .technologies {
+        .main-techs-list {
+            gap: 40px;
+            a {
+                img {
+                    height: 80px;
+                    width: 80px;
+                }
+            }
+        }
+    }
+}
+
+@include for-medium-layout {
+    .technologies {
+        .main-techs-list {
+            gap: 60px;
+            a {
+                img {
+                    height: 120px;
+                    width: 120px;
                 }
             }
         }
