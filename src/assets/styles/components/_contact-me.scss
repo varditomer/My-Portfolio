@@ -1,5 +1,5 @@
 .contact-me {
-    max-height: 30vh;
+    // height: 30vh;
     @include flex-vertically-center;
     flex-direction: column;
     > * {
@@ -16,17 +16,28 @@
         .contact-opt {
             @include flex-vertically-center;
             flex-direction: column;
-            >* {
+            > * {
                 cursor: pointer;
             }
             .contact-opt-content {
-                font-family: Jost-SemiBold, sans-serif;
+                margin-top: 4px;
+                font-family: Quicksand-SemiBold, sans-serif;
                 color: $clr--white;
                 font-size: rem(18px);
             }
-            
+            // .icon {
+            //     transform: translate(60deg);
+            // }
+            .icon {
+                &:hover {
+                    animation: spin 2.5s infinite;
+                    transform-origin: 50% 50%;
+                    display: inline-block;
+                }
+            }
         }
     }
+
     .bottom {
         background-color: $clr2;
         @include flex-vertically-center;
@@ -41,33 +52,39 @@
                     height: 100%;
                     width: 100%;
                 }
-            }
-            > *:hover {
-                a.linkedin,
-                a.facebook {
-                    border-radius: 2em;
-                    background-color: white;
-                    outline: 6px solid $clr2;
-                    outline-offset: -5px;
-                }
-                a.linkedin > * {
-                    fill: rgb(10, 123, 186);
-                }
-                a.facebook {
-                    fill: rgb(24, 119, 242);
-                }
-                a.github > * {
-                    fill: lightgray;
-                    background-color: $clr2;
-                    border-radius: 2em;
-                    // outline: 6px solid black;
-                    //     outline-offset: -5px;
+
+                &:hover {
+                    animation: spin 2.5s infinite;
+                    transform-origin: 50% 50%;
+
+                    a.linkedin,
+                    a.facebook {
+                        border-radius: 2em;
+                        background-color: white;
+                        outline: 6px solid $clr2;
+                        outline-offset: -5px;
+                    }
+                    a.linkedin > * {
+                        fill: rgb(10, 123, 186);
+                    }
+                    a.facebook {
+                        fill: rgb(24, 119, 242);
+                    }
+                    a.github > * {
+                        fill: lightgray;
+                        background-color: $clr2;
+                        border-radius: 2em;
+                    }
                 }
             }
         }
         .copy-rights {
+            font-family: Jost-Thin;
             color: $clr--white;
             font-size: rem(20px);
+            span {
+                font-size: rem(16px);
+            }
         }
     }
 }

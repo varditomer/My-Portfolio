@@ -14,8 +14,8 @@
             bottom: -250px;
         }
         &.dots {
+            bottom: -150px;
             right: -150px;
-            top: 550px;
             z-index: -50;
         }
     }
@@ -37,6 +37,7 @@
 }
 
 .project-card {
+    background-color: white;
     height: 100%;
     position: relative;
     @include flex-vertically-center;
@@ -45,11 +46,15 @@
     max-height: 700px;
     border-radius: 25px;
     box-shadow: $card-shadow;
-    padding: 0 20px;
+    padding: 36px 20px;
     gap: 18px;
     .project-img {
+        width: 96%;
         height: 40%;
-        object-fit: cover;
+        object-fit: fill;
+        border-radius: 15px;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+            rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     }
 
     .project-title {
@@ -70,11 +75,19 @@
         &:hover {
             max-height: 300px;
             overflow: visible;
-            -webkit-line-clamp: unset; /*define how many line you want to show */
+            -webkit-line-clamp: unset;
         }
     }
-    .more-details {
+    .watch-demo {
         align-self: flex-start;
-        margin-bottom: 36px;
+        a {
+            color: $clr--white;
+            &:visited {
+                color: lightgray;
+            }
+            &:hover {
+                color: $clr1;
+            }
+        }
     }
 }

@@ -1,18 +1,15 @@
 <template>
-  <header>
+  <header class="app-header full" aria-label="welcome to my portfolio - here you can nav to the part that you want">
     <div class="logo">
-      <img src="../assets/imgs/portfolio_logo.png" alt="">
-      <span>PORTFOLIO</span>
+      <div class="txt">Tomer</div>
+      <img src="../assets/imgs/lines.png" alt="" class="logo-img">
     </div>
-    <nav>
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#technologies">Technologies</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
     </nav>
   </header>
 </template>
-<script>
-export default {
-  computed: {
-  }
-}
-</script>

@@ -1,0 +1,19 @@
+.introduction {
+    display: flex;
+    align-items: center;
+    height: 87.5vh;
+    // flex-basis: 80%;
+    .intro-content{
+        p {
+            width: clamp(70%, 80%, 90%);
+        }
+    }
+    .flying-man {
+        // flex-basis: 20%;
+        width: 40%;
+        position: relative;
+        bottom: 10%;
+        // right: 5%;
+        // width: 100%;
+    }
+}

@@ -1,0 +1,39 @@
+.app-header {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    padding: 30px 15px 30px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 12.5vh;
+    .logo {
+        display: flex;
+        align-items: center;
+        color: $clr--black;
+        cursor: default;
+        div {
+            margin: 0;
+            padding: 0;
+            font-size: rem(60px);
+            text-transform: uppercase;
+            font-family: Jost-Bold, sans-serif;
+            margin-inline-end: 10px;
+        }
+    }
+    .main-nav {
+        width: calc((1130 / 1920) * 100vw - 20px);
+    }
+    .nav-list {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+
+        a,
+        a:visited {
+            color: $clr--white;
+            text-transform: uppercase;
+        }
+        a:hover {
+            color: $clr2;
+        }
+    }
+}

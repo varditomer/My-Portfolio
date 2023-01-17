@@ -1,0 +1,23 @@
+@keyframes spin {
+    // 0% {
+    //     transform: rotate(45deg);
+    // }
+    33% {
+        transform: rotate(45deg);
+    }
+    // 60% {
+    //     transform: rotate(0deg);
+    // }
+    66% {
+        transform: rotate(-45deg);
+    }
+}
+@keyframes blink {
+    100%,
+    0% {
+        fill: rgb(10, 123, 186);
+    }
+    60% {
+        fill: darken(rgb(10, 123, 186),20%);
+    }
+}

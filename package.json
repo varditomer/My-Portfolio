@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@meforma/vue-copy-to-clipboard": "^0.0.1",
     "sass": "^1.53.0",
     "vue": "^3.2.37",
     "vue-router": "^4.1.2"

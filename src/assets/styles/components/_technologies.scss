@@ -5,7 +5,7 @@
     justify-content: center;
     flex-direction: column;
     // justify-content: space-evenly;
-    
+
     .main-techs-list {
         @include flex-vertically-center;
         justify-content: center;
@@ -17,17 +17,11 @@
                 height: 120px;
                 width: 120px;
             }
+            > * {
+                &:hover {
+                    animation: blink 0.8s infinite;
+                }
+            }
         }
-    }
-    .additional-techs-container {
-        @include flex-vertically-center;
-        justify-content: center;
-    }
-
-    .additional-techs-list {
-        list-style-type: disc;
-        margin-top: 10px;
-        column-count: 3;
-        column-gap: 60px;
     }
 }
