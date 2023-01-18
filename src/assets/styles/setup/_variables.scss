@@ -1,15 +1,18 @@
 // Colors
 $clr1: #828089;
-$clr2: #2B2B2B;
+$clr2: #2b2b2b;
 
 $clr--white: #fff;
 $clr--black: #000;
 $clr-primary: #828089;
 
 $btn-grad: linear-gradient(294.67deg, rgba(2, 131, 233, 0.6) 18.99%, rgba(252, 1, 202, 0.6) 90.66%);
+$btn-grad-dark: linear-gradient(
+    294.67deg,
+    darken(rgba(2, 131, 233, 0.6), 15%) 18.99%,
+    darken(rgba(252, 1, 202, 0.6), 15%) 90.66%
+);
 $card-shadow: (0px 0px 30px 0px #00000033);
-
-
 
 // Breakpoints
 $small-breakpoint: 560px;

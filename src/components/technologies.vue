@@ -4,7 +4,7 @@
             <h2 id="sectionTitle" class="section-title">Technologies</h2>
 
             <p class="section-intro">
-                Here's a list of my main technologies that I have been gained.
+                Here is a list of my main technologies that I gained and mastered.
                 Click on each to read it's documentation!
             </p>
         </div>

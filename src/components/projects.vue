@@ -3,7 +3,7 @@
 
 <h2 id="sectionTitle" class="section-title">Projects</h2>
 <p class="section-intro">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Have a look at my projects I accomplished.
 </p>
 
 <img src="../assets/imgs/rectangles.png" alt="" class="addon-shape left rectangles">
@@ -21,7 +21,7 @@
 
       <p class="project-description">
         An end-to-end Monday clone web application built using the Vue\x for the frontend and Node.js for the
-        backend, with a MongoDB database to store data and web socket using Socket.IO to support live updates.
+        backend, with a MongoDB database to store data and web sockets using Socket.IO to support live updates.
       </p>
 
     </div>
@@ -43,7 +43,7 @@
       <h3 class="project-title">Bitcoinnect</h3>
 
       <p class="project-description">
-        React & Angular web applications to handle bitcoin transfer between the user to his contacts. including bitCoin stats API, and designed to learn and fulfill each frameworks techs. and advantages.
+        React & Angular web applications to handle Bitcoin transfers from the user to his contacts. including BitCoin statistics API, and designed to learn and fulfill each frameworks technologies and advantages.
       </p>
     </div>
     <button class="custom-btn watch-demo">
@@ -60,7 +60,7 @@
       <h3 class="project-title">Appsus</h3>
 
       <p class="project-description">
-        A frontend google mail&keep clones web applications each built using Vue. includes mail and note archiving and different types of notes to choose.
+        A frontend Google mail & keep clones web applications each built using Vue. Includes mail and notes archiving and different types of notes to choose.
       </p>
     </div>
 

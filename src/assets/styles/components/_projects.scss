@@ -48,7 +48,7 @@
         text-overflow: ellipsis;
         -webkit-line-clamp: 4; /*define how many line you want to show */
         -webkit-box-orient: vertical;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.8s ease-in-out;
         font-size: rem(22px);
         &:hover {
             max-height: 400px;
@@ -60,11 +60,10 @@
         align-self: flex-start;
         a {
             color: $clr--white;
-            &:visited {
+        }
+        &:hover {
+            a{
                 color: lightgray;
-            }
-            &:hover {
-                color: $clr1;
             }
         }
     }
@@ -84,7 +83,6 @@
 @include for-medium-layout {
     .projects {
         margin-bottom: 250px;
-        position: relative;
         > *:not(.addon-shape) {
             padding-inline: 50px;
         }
@@ -131,7 +129,6 @@
 
 @include for-large-layout {
     .projects {
-        margin-bottom: 250px;
         position: relative;
         > *:not(.addon-shape) {
             padding-inline: 100px;

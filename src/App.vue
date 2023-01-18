@@ -1,9 +1,10 @@
 <template>
   <section class="main-layout">
 
-    <app-header />
+    <app-header :showMenu="showMenu" @toggleMenu="showMenu=!showMenu" />
 
     <div class="main-content full">
+      <div v-if="showMenu" class="main-screen" @click="showMenu=!showMenu"></div>
       <introduction />
       <projects />
       <technologies />
@@ -28,6 +29,17 @@ import contact from './components/contact.vue'
 import userMsg from './components/user-msg.vue'
 
 export default {
+  data() {
+    return {
+      showMenu: false,
+    }
+  },
+  methods: {
+    closeScreen() {
+      this.showScreen = false
+      this.closeMenu = true
+    }
+  },
   components: {
     appHeader,
     introduction,

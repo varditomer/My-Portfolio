@@ -50,6 +50,7 @@ ul {
 }
 
 ::-webkit-scrollbar-thumb {
+    // z-index: 20;
     background-color: gray;
     border-radius: 20px;
     // outline: 0.5px solid darkblue;

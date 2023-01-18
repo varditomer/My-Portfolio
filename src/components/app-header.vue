@@ -4,8 +4,8 @@
       <div class="txt">Tomer</div>
       <img src="../assets/imgs/lines.png" alt="" class="logo-img">
     </div>
-    <nav class="main-nav">
-      <button class="menu">hum</button>
+    <button v-if="!showMenu" class="btn-menu custom-btn" @click="$emit('toggleMenu')">☰</button>
+    <nav class="main-nav" :class="{'menu-open': showMenu}">
       <ul class="nav-list">
         <li><a href="#projects">Projects</a></li>
         <li><a href="#technologies">Technologies</a></li>
@@ -14,3 +14,16 @@
     </nav>
   </header>
 </template>
+
+<script>
+export default {
+  name: 'cmp-name',
+  emits: ['toggleMenu'],
+  props: {
+    showMenu: {
+            type: Boolean,
+            required: true
+        },
+  },
+}
+</script>

@@ -28,7 +28,15 @@
     overflow-y: overlay;
     height: 100vh;
 
+    .main-screen {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 15;
+    }
+
     .main-content {
+        margin-top: 12.5vh;
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -39,7 +47,6 @@
     .wave {
         display: none;
     }
-
 }
 
 @include for-small-layout {
@@ -81,7 +88,6 @@
         }
     }
 }
-
 
 // @include for-small-layout {
 // }

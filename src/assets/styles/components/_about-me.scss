@@ -2,22 +2,17 @@
     min-height: 70vh;
     padding: 0 20px;
     .intro {
-        @include flex-vertically-center;
         margin-bottom: 25px;
         .section-intro {
             margin: 0;
         }
-        .my-img-container {
+        .container {
+            float: right;
             @include flex-vertically-center;
             justify-content: center;
-            position: relative;
-            width: 50%;
-            .container {
-                @include flex-vertically-center;
-                background: $btn-grad;
-                border-radius: 4em;
-                padding: 2px;
-            }
+            background: $btn-grad;
+            border-radius: 4em;
+            padding: 2px;
         }
     }
     .time-line-container {
@@ -26,18 +21,19 @@
         position: relative;
         .time-line {
             display: flex;
+            flex-direction: column;
             gap: 20px;
         }
         .time-line-fill {
             background-color: $clr2;
-            height: 6px;
             position: absolute;
-            top: 48px;
-            width: calc(100% - 20px);
+            top: 0px;
+            height: 100%;
+            width: 6px;
         }
 
         .milestone {
-            min-height: 310px;
+            // min-height: 310px;
             @include flex-vertically-center;
             flex-direction: column;
             text-align: center;
@@ -45,26 +41,94 @@
                 @include flex-vertically-center;
                 justify-content: center;
                 position: relative;
+                background-color: white;
                 .dot {
                     position: absolute;
-                    width: 24px;
-                    height: 24px;
                     background-color: $clr--white;
-                    border: 1px solid red;
-                    border-radius: 50%;
+                    > * {
+                        outline: 1px solid red;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 2em;
+                    }
+
                     bottom: -30px;
-                    // right: 12px;
-                    z-index: 15;
+                    z-index: 14;
                 }
             }
             .milestone-txt {
+                z-index: 10;
+                background-color: white;
                 padding: 30px 10px 0;
                 font-family: Jost-SemiBold, serif;
-                font-size: rem(24px);
-                
+                font-size: rem(20px);
             }
         }
     }
+}
 
+@include for-small-layout {
+}
 
+@include for-medium-layout {
+    .about {
+        .time-line-container {
+            .time-line {
+                flex-direction: row;
+            }
+            .time-line-fill {
+                top: 48px;
+                height: 6px;
+                width: calc(100% - 48px);
+            }
+
+            .milestone {
+                // min-height: 310px;
+                @include flex-vertically-center;
+                flex-direction: column;
+                text-align: center;
+                .milestone-date-container {
+                    @include flex-vertically-center;
+                    justify-content: center;
+                    position: relative;
+                    background-color: transparent;
+                    .dot {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        // @include flex-vertically-center;
+                        position: absolute;
+
+                        // width: 40px;
+                        // height: 40px;
+                        // padding: 2px;
+                        border-radius: 2em;
+
+                        background-color: $clr--white;
+                        // border: 1px solid red;
+                        > * {
+                            outline: 1px solid red;
+                            width: 36px;
+                            height: 36px;
+                            border-radius: 2em;
+                        }
+                        // border-radius: 2em;
+                        bottom: -40px;
+                        z-index: 15;
+                    }
+                }
+                .milestone-txt {
+                    z-index: 10;
+                    background-color: transparent;
+                    padding: 40px 10px 0;
+                    font-family: Jost-SemiBold, serif;
+                    font-size: rem(20px);
+                }
+            }
+        }
+    }
+}
+
+@include for-large-layout {
 }
