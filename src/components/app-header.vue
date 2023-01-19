@@ -7,9 +7,9 @@
     <button v-if="!showMenu" class="btn-menu custom-btn" @click="$emit('toggleMenu')">☰</button>
     <nav class="main-nav" :class="{'menu-open': showMenu}">
       <ul class="nav-list">
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#technologies">Technologies</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#projects" @touchend="$emit('toggleMenu')">Projects</a></li>
+        <li><a href="#technologies" @touchend="$emit('toggleMenu')">Technologies</a></li>
+        <li><a href="#about" @touchend="$emit('toggleMenu')">About</a></li>
       </ul>
     </nav>
   </header>

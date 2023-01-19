@@ -1,7 +1,6 @@
 .technologies {
     min-height: 100vh;
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
     .main-techs-list {
         @include flex-vertically-center;
@@ -20,6 +19,7 @@
 
 @include for-small-layout {
     .technologies {
+        justify-content: space-around;
         .main-techs-list {
             gap: 40px;
             a {

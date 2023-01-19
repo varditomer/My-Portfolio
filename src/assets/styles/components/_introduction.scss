@@ -4,6 +4,10 @@
     .flying-man {
         display: none;
     }
+    .circle-container {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @include for-small-layout {
@@ -15,6 +19,10 @@
         min-height: 87.5vh;
         margin-top: 0;
         align-items: center;
+        .circle-container {
+            display: flex;
+            justify-content: unset;
+        }
         .intro-content {
             p {
                 width: clamp(80%, 90%, 95%);
@@ -31,7 +39,6 @@
 
 @include for-large-layout {
     .introduction {
-        display: inherit;
         .flying-man {
             width: 40%;
             position: relative;

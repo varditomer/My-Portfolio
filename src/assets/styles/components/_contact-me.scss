@@ -1,9 +1,5 @@
 .contact-me {
-    height: 30vh;
-    @include flex-vertically-center;
-    flex-direction: column;
     > * {
-        width: 100%;
         padding: 15px 0;
     }
 
@@ -11,7 +7,6 @@
         background-color: $clr1;
         @include flex-vertically-center;
         justify-content: center;
-        width: 100%;
         gap: 30px;
         .contact-opt {
             @include flex-vertically-center;
@@ -20,10 +15,7 @@
                 cursor: pointer;
             }
             .contact-opt-content {
-                margin-top: 4px;
-                font-family: Quicksand-SemiBold, sans-serif;
-                color: $clr--white;
-                font-size: rem(18px);
+                display: none;
             }
             .icon {
                 &:hover {
@@ -46,11 +38,6 @@
             @include flex-vertically-center;
             gap: 30px;
             > * {
-                > * {
-                    height: 100%;
-                    width: 100%;
-                }
-
                 &:hover {
                     animation: spin 2.5s infinite;
                     transform-origin: 50% 50%;
@@ -84,5 +71,42 @@
                 font-size: rem(16px);
             }
         }
+    }
+}
+
+@include for-small-layout {
+    .contact-me {
+        .contact-opts {
+            .contact-opt {
+                .contact-opt-content {
+                    margin-top: 4px;
+                    font-family: Quicksand-SemiBold, sans-serif;
+                    color: $clr--white;
+                    font-size: rem(18px);
+                    display: inherit;
+                }
+            }
+        }
+    }
+}
+
+@media (hover: none) {
+    a.linkedin,
+    a.facebook {
+        border-radius: 2em;
+        background-color: white;
+        outline: 6px solid $clr2;
+        outline-offset: -5px;
+    }
+    a.linkedin > * {
+        fill: rgb(10, 123, 186);
+    }
+    a.facebook {
+        fill: rgb(24, 119, 242);
+    }
+    a.github > * {
+        fill: lightgray;
+        background-color: $clr2;
+        border-radius: 2em;
     }
 }

@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 15px 30px 10px;
+    padding: 30px 15px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
     height: 12.5vh;
     .logo {
@@ -19,30 +19,10 @@
         }
     }
     .btn-menu {
-        width: 40px;
-        height: 40px;
-        font-size: rem(20px);
-        margin-right: 20px;
-        // background-color: black;
         display: none;
     }
     .main-nav {
-        // position: fixed;
-        // top: 0;
-        // right: 15px;
-        // background-color: rgba(255, 255, 255, 90%);
-        // border-inline-start: 1px solid #ccc;
-        // box-shadow: -3px 0px 14px #ccc;
-        // z-index: 30;
         .nav-list {
-            // a,
-            // a:visited {
-            //     color: $clr--white;
-            //     text-transform: uppercase;
-            // }
-            // a:hover {
-            //     color: $clr2;
-            // }
         }
     }
 }
@@ -50,17 +30,20 @@
 @media (max-width: 800px) {
     .app-header {
         .btn-menu {
+            width: 40px;
+            height: 40px;
+            font-size: rem(20px);
             display: inherit;
         }
         .main-nav {
             position: fixed;
             top: 0;
-            right: 15px;
-            background-color: rgba(255, 255, 255, 90%);
+            right: 0;
+            background-color: rgb(255, 255, 255);
             border: 1px solid #ccc;
             z-index: 30;
             min-width: 220px;
-            transform: translateX(calc(100% + 15px));
+            transform: translateX(100%);
             transition: transform 0.6s, box-shadow 0.6s;
             &.menu-open {
                 transform: translateX(0);
@@ -91,7 +74,6 @@
 
 @include for-small-layout {
     .app-header {
-        padding-left: 20px;
         .logo {
             .txt {
                 font-size: rem(50px);
@@ -148,80 +130,3 @@
         }
     }
 }
-
-// .app-header {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     padding: 30px 15px 30px 10px;
-//     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-//     height: 12.5vh;
-//     .logo {
-//         display: flex;
-//         align-items: center;
-//         color: $clr--black;
-//         cursor: default;
-//         div {
-//             margin: 0;
-//             padding: 0;
-//             font-size: rem(60px);
-//             text-transform: uppercase;
-//             font-family: Jost-Bold, sans-serif;
-//             margin-inline-end: 10px;
-//         }
-//     }
-//     .main-nav {
-//         width: calc((1130 / 1920) * 100vw - 20px);
-//         // background-color: #177ae7;
-//     }
-//     .nav-list {
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         gap: 40px;
-//         > * {
-//             text-align: right;
-//         }
-
-//         a,
-//         a:visited {
-//             color: $clr--white;
-//             text-transform: uppercase;
-//         }
-//         a:hover {
-//             color: $clr2;
-//         }
-//     }
-// }
-
-// @media screen and (max-width: 1000px) {
-//     .main-layout {
-//         .app-header {
-//             padding: 20px 15px 20px 60px;
-//             .main-nav {
-//                 // width: 100%;
-//                 // padding-right: 150px;
-//                 position: absolute;
-//                 top: 0;
-//                 // top: 133px;
-//                 right: 15px;
-//                 // background-color: black;
-//                 .nav-list {
-//                     display: flex;
-//                     flex-direction: column;
-//                     justify-content: center;
-//                     // gap: 40px;
-//                     > * {
-//                         text-align: right;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-//     .main-content {
-//         >*:not(.full){
-//             padding: 0 60px 0 60px !important;
-//         }
-
-//     }
-// }

@@ -10,8 +10,10 @@
         I seek a position where I can utilize my skills and
         knowledge, that will contribute to the success of a team
       </p>
+      <div class="circle-container">
+        <img src="../assets/imgs/circle.png" alt="" class="addon-shape circle">
+      </div>
 
-      <img src="../assets/imgs/circle.png" alt="" class="addon-shape circle">
     </div>
 
     <img src="../assets/imgs/flying_man.png" alt="" class="addon-shape flying-man">

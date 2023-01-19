@@ -10,59 +10,63 @@
         display: grid;
         align-items: center;
         justify-content: center;
-        padding: 0 40px;
+        padding: 0 20px;
         row-gap: 20px;
     }
 }
 
 .project-card {
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    background-color: white;
     position: relative;
     @include flex-vertically-center;
     flex-direction: column;
     justify-content: space-between;
-    gap: 18px;
-    padding: 36px 20px;
+    padding: 30px;
     height: 100%;
-    // max-height: 700px;
     border-radius: 25px;
-    box-shadow: $card-shadow;
-    background-color: white;
+    max-width: 500px;
+    &:hover {
+        .project-description {
+            max-height: 400px;
+            -webkit-line-clamp: unset;
+        }
+    }
+
     .project-img {
         width: 100%;
-        height: 40%;
+        aspect-ratio: 16/9;
+        max-height: 200px;
         object-fit: fill;
         border-radius: 15px;
         box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
             rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     }
     .project-title {
+        margin: 15px 0 10px 0;
         font-family: Poppins-Bold;
         font-size: rem(40px);
-        margin-bottom: 20px;
     }
 
     .project-description {
-        max-height: 152px;
+        max-height: 132px;
         display: -webkit-box;
         overflow: hidden;
         text-overflow: ellipsis;
         -webkit-line-clamp: 4; /*define how many line you want to show */
         -webkit-box-orient: vertical;
-        transition: all 0.8s ease-in-out;
+        transition: 1s ease-in-out;
         font-size: rem(22px);
-        &:hover {
-            max-height: 400px;
-            overflow: visible;
-            -webkit-line-clamp: unset;
-        }
+        color: $clr2;
     }
     .watch-demo {
+        margin-top: 20px;
         align-self: flex-start;
         a {
             color: $clr--white;
         }
         &:hover {
-            a{
+            a {
                 color: lightgray;
             }
         }
@@ -106,10 +110,11 @@
         .projects-content {
             position: relative;
             z-index: 20;
-            grid-template-columns: repeat(2, minmax(200px, 600px));
+            grid-template-columns: repeat(2, minmax(200px, 500px));
             grid-template-rows: repeat(2, 700px);
             column-gap: 100px;
             row-gap: 200px;
+            padding: 0 40px;
         }
         .projects-content > *:nth-child(2) {
             grid-row: 1/3;
@@ -117,6 +122,8 @@
     }
 
     .project-card {
+        box-shadow: $card-shadow;
+
         max-height: 700px;
         .project-title {
             font-size: rem(45px);
@@ -137,10 +144,16 @@
     .project-card {
         .project-title {
             font-size: rem(50px);
-            margin-bottom: 20px;
         }
+    }
+}
+
+@media (hover: none) {
+    .project-card {
         .project-description {
-            font-size: inherit;
+            max-height: 400px;
+            overflow: visible;
+            -webkit-line-clamp: unset;
         }
     }
 }

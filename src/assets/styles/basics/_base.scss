@@ -13,9 +13,8 @@ html {
 
 body {
     margin: 0;
-    font-size: rem(30px);
+    font-size: rem(20px);
     color: $clr-primary;
-    // line-height: 1;
 }
 
 h1,
@@ -46,40 +45,46 @@ ul {
 }
 
 ::-webkit-scrollbar {
-    width: 15px;
+    display: none;
 }
 
 ::-webkit-scrollbar-thumb {
-    // z-index: 20;
     background-color: gray;
     border-radius: 20px;
-    // outline: 0.5px solid darkblue;
 }
-
-// section styles:
 
 section {
     .section-title {
-        margin-bottom: 24px;
+        margin-bottom: 15px;
         font-size: rem(45px);
     }
     .section-intro {
-        margin-bottom: 45px;
+        margin-bottom: 30px;
     }
 }
 
 @include for-small-layout {
+    body {
+        font-size: rem(30px);
+    }
     section {
         .section-title {
             font-size: rem(50px);
+            margin-bottom: 24px;
+        }
+        .section-intro {
+            margin-bottom: 45px;
         }
     }
 }
 
 @include for-medium-layout {
+    ::-webkit-scrollbar {
+        display: inherit;
+        width: 15px;
+    }
     section {
         .section-title {
-            margin-bottom: 24px;
             font-size: rem(62px);
         }
     }

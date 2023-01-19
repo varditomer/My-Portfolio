@@ -25,15 +25,9 @@
             gap: 20px;
         }
         .time-line-fill {
-            background-color: $clr2;
-            position: absolute;
-            top: 0px;
-            height: 100%;
-            width: 6px;
+            display: none;
         }
-
         .milestone {
-            // min-height: 310px;
             @include flex-vertically-center;
             flex-direction: column;
             text-align: center;
@@ -46,20 +40,19 @@
                     position: absolute;
                     background-color: $clr--white;
                     > * {
-                        outline: 1px solid red;
-                        width: 30px;
-                        height: 30px;
+                        width: 40px;
+                        height: 40px;
                         border-radius: 2em;
                     }
-
-                    bottom: -30px;
+                    bottom: -45px;
                     z-index: 14;
                 }
             }
             .milestone-txt {
-                z-index: 10;
+                flex: 1;
                 background-color: white;
-                padding: 30px 10px 0;
+                color: darken($clr1, 5%);
+                padding: 50px 10px 0;
                 font-family: Jost-SemiBold, serif;
                 font-size: rem(20px);
             }
@@ -70,20 +63,21 @@
 @include for-small-layout {
 }
 
-@include for-medium-layout {
+@media (min-width: 900px) {
     .about {
         .time-line-container {
             .time-line {
                 flex-direction: row;
             }
             .time-line-fill {
+                display: inherit;
+                background-color: $clr2;
+                position: absolute;
                 top: 48px;
                 height: 6px;
                 width: calc(100% - 48px);
             }
-
             .milestone {
-                // min-height: 310px;
                 @include flex-vertically-center;
                 flex-direction: column;
                 text-align: center;
@@ -96,24 +90,14 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-
-                        // @include flex-vertically-center;
                         position: absolute;
-
-                        // width: 40px;
-                        // height: 40px;
-                        // padding: 2px;
                         border-radius: 2em;
-
                         background-color: $clr--white;
-                        // border: 1px solid red;
                         > * {
-                            outline: 1px solid red;
                             width: 36px;
                             height: 36px;
                             border-radius: 2em;
                         }
-                        // border-radius: 2em;
                         bottom: -40px;
                         z-index: 15;
                     }

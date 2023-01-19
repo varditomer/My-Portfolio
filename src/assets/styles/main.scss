@@ -36,12 +36,8 @@
     }
 
     .main-content {
-        margin-top: 12.5vh;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
         > *:not(.full) {
-            padding: 0 10px 0 10px;
+            padding: 0 15px;
         }
     }
     .wave {

@@ -3,7 +3,7 @@
 
     <ul class="contact-opts">
       <li class="contact-opt">
-        <a class="icon" v-svg-icon="'whatsapp'" href="https://wa.me/972547721538?text=היי!%20אני%20תומר,%20נעים%20להכיר%20אותך.%20בוא%20ניצור%20קשר%20:-)" target="_blank" title="Contact on whatsapp" aria-label="Chat on WhatsApp"></a>
+        <a class="icon" v-svg-icon="'whatsapp'" href="https://wa.me/972547721538?text=היי%20תומר,%20נעים%20להכיר." target="_blank" title="Contact on whatsapp" aria-label="Chat on WhatsApp"></a>
         <span class="contact-opt-content" @click="this.$copyText(`0547721538`)" title="Copy phone">054-7721538</span>
       </li>
       <li class="contact-opt">
