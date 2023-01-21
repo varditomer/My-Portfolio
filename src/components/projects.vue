@@ -3,7 +3,7 @@
 
     <h2 id="sectionTitle" class="section-title">Projects</h2>
     <p class="section-intro">
-      Have a look at my projects I accomplished.
+      Checkout my latest projects.
     </p>
 
     <img src="../assets/imgs/rectangles.png" alt="" class="addon-shape left rectangles">

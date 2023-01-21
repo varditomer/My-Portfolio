@@ -2,11 +2,15 @@
     <section id="technologies" class="technologies" aria-labelledby="sectionTitle">
         <div class="section-header">
             <h2 id="sectionTitle" class="section-title">Technologies</h2>
+            <div class="section-intro">
+                <p>
+                    Here is a list of my main technologies that I gained and mastered.
+                </p>
+                <p>
+                    Click on each to read it's documentation!
+                </p>
+            </div>
 
-            <p class="section-intro">
-                Here is a list of my main technologies that I gained and mastered.
-                Click on each to read it's documentation!
-            </p>
         </div>
 
         <div class="main-techs-list">

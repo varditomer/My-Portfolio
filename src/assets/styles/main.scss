@@ -36,6 +36,10 @@
     }
 
     .main-content {
+        > *:not(.addon-shape) {
+            margin-top: 30px;
+
+        }
         > *:not(.full) {
             padding: 0 15px;
         }
@@ -49,7 +53,7 @@
     .main-layout {
         .main-content {
             > *:not(.full) {
-                padding: 0 20px 0 20px;
+                padding: 0 20px;
             }
         }
     }
@@ -59,7 +63,7 @@
     .main-layout {
         .main-content {
             > *:not(.full) {
-                padding: 0 50px 0 50px;
+                padding: 0 50px;
             }
         }
         .wave {
@@ -79,7 +83,7 @@
     .main-layout {
         .main-content {
             > *:not(.full) {
-                padding: 0 100px 0 100px;
+                padding: 0 100px;
             }
         }
     }

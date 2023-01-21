@@ -1,17 +1,25 @@
 .introduction {
     display: flex;
     margin-top: 20px;
+    .section-intro {
+        line-height: 1.4;
+    }
     .flying-man {
         display: none;
     }
     .circle-container {
+        height: 100px;
         display: flex;
         justify-content: center;
     }
 }
 
 @include for-small-layout {
-
+    .introduction {
+        .circle-container {
+            height: 120px;
+        }
+    }
 }
 
 @include for-medium-layout {
