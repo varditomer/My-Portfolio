@@ -105,6 +105,17 @@
                     color: $clr--white;
                     text-transform: uppercase;
                 }
+            }
+        }
+    }
+}
+
+@media (hover: hover) {
+    .app-header {
+        .main-nav {
+            .menu {
+            }
+            .nav-list {
                 a:hover {
                     color: $clr2;
                 }
