@@ -60,11 +60,6 @@
                     text-transform: uppercase;
                     font-size: rem(24px);
                 }
-                @media (hover: hover) {
-                    a:hover {
-                        background-color: lighten($clr1, 38%);
-                    }
-                }
             }
         }
     }
