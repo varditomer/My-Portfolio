@@ -60,8 +60,10 @@
                     text-transform: uppercase;
                     font-size: rem(24px);
                 }
-                a:hover {
-                    background-color: lighten($clr1, 38%);
+                @media (hover: hover) {
+                    a:hover {
+                        background-color: lighten($clr1, 38%);
+                    }
                 }
             }
         }
@@ -105,17 +107,6 @@
                     color: $clr--white;
                     text-transform: uppercase;
                 }
-            }
-        }
-    }
-}
-
-@media (hover: hover) {
-    .app-header {
-        .main-nav {
-            .menu {
-            }
-            .nav-list {
                 a:hover {
                     color: $clr2;
                 }

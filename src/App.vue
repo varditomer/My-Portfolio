@@ -6,7 +6,7 @@
 
 
     <div class="main-content full">
-      <div v-if="showMenu" class="main-screen" @click="showMenu=!showMenu"></div>
+      <div v-if="showMenu" class="main-screen addon-shape" @click="showMenu=!showMenu"></div>
       <introduction />
       <projects />
       <technologies />
