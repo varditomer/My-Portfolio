@@ -8,8 +8,8 @@
     <nav class="main-nav" :class="{ 'menu-open': showMenu }">
       <ul class="nav-list">
         <li><a href="#projects" @touchend="handleClickToLink('projects')">Projects</a></li>
-        <li><a href="#technologies" @touchend="handleClickToLink('projects')">Technologies</a></li>
-        <li><a href="#about" @touchend="handleClickToLink('projects')">About</a></li>
+        <li><a href="#technologies" @touchend="handleClickToLink('technologies')">Technologies</a></li>
+        <li><a href="#about" @touchend="handleClickToLink('about')">About</a></li>
       </ul>
     </nav>
   </header>
