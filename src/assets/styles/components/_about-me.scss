@@ -60,9 +60,6 @@
     }
 }
 
-@include for-small-layout {
-}
-
 @media (min-width: 900px) {
     .about {
         .time-line-container {
