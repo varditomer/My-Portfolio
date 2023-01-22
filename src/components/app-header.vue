@@ -5,11 +5,11 @@
       <img src="../assets/imgs/lines.png" alt="" class="logo-img">
     </div>
     <button v-if="!showMenu" class="btn-menu custom-btn" @click="$emit('toggleMenu')">☰</button>
-    <nav class="main-nav" :class="{'menu-open': showMenu}">
+    <nav class="main-nav" :class="{ 'menu-open': showMenu }">
       <ul class="nav-list">
-        <li><a href="#projects" @touchend="$emit('toggleMenu')">Projects</a></li>
-        <li><a href="#technologies" @touchend="$emit('toggleMenu')">Technologies</a></li>
-        <li><a href="#about" @touchend="$emit('toggleMenu')">About</a></li>
+        <li><a href="#projects" @touchend="handleClickToLink('projects')">Projects</a></li>
+        <li><a href="#technologies" @touchend="handleClickToLink('projects')">Technologies</a></li>
+        <li><a href="#about" @touchend="handleClickToLink('projects')">About</a></li>
       </ul>
     </nav>
   </header>
@@ -21,9 +21,17 @@ export default {
   emits: ['toggleMenu'],
   props: {
     showMenu: {
-            type: Boolean,
-            required: true
-        },
+      props: {},
+      type: Boolean,
+      required: true
+    },
   },
+  methods: {
+    handleClickToLink(to) {
+      this.$emit('toggleMenu')
+      var access = document.getElementById(to)
+      access.scrollIntoView({ behavior: 'smooth' }, true)
+    }
+  }
 }
 </script>
