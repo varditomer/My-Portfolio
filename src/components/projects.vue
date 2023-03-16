@@ -14,6 +14,30 @@
 
       <article class="project-card">
         <div>
+          <img src="../assets/imgs/project_imgs/retwitt-app.png" alt="" class="project-img">
+          <div class="proj-txt">
+
+            <h3 class="project-title">Retwitt</h3>
+
+            <p class="project-description">
+              An end-to-end Twitter clone web application built using the Typescript with React&Redux for the fronted & Express-Node.JS for the backend,
+              Including AtlasDB and Cloudinary for storing data.
+            </p>
+
+          </div>
+        </div>
+
+        <button class="custom-btn watch-demo">
+          <a href="https://someday.onrender.com" target="_blank" class="btn-txt">Try it</a>
+        </button>
+
+        <img src="../assets/imgs/dots.png" alt="" class="addon-shape dots">
+
+
+      </article>
+
+      <article class="project-card">
+        <div>
           <img src="../assets/imgs/project_imgs/someday.png" alt="" class="project-img">
           <div class="proj-txt">
 
@@ -30,9 +54,8 @@
         <button class="custom-btn watch-demo">
           <a href="https://someday.onrender.com" target="_blank" class="btn-txt">Try it</a>
         </button>
-
-        <img src="../assets/imgs/dots.png" alt="" class="addon-shape dots">
-
+      
+        
 
       </article>
 
@@ -51,27 +74,6 @@
         </div>
         <button class="custom-btn watch-demo">
           <a class="btn-txt" href="https://varditomer.github.io/bitcoinnect" target="_blank">Try it</a>
-        </button>
-
-      </article>
-
-      <article class="project-card">
-        <div>
-          <img src="../assets/imgs/project_imgs/appsus.png" alt="" class="project-img">
-
-          <div class="proj-txt">
-
-            <h3 class="project-title">Appsus</h3>
-
-            <p class="project-description">
-              A frontend Google mail & keep clones web applications each built using Vue. Includes mail and notes
-              archiving and different types of notes to choose.
-            </p>
-          </div>
-        </div>
-
-        <button class="custom-btn watch-demo">
-          <a class="btn-txt" href="https://refarefa1.github.io/Appsus/#/keep/notes" target="_blank">Try it</a>
         </button>
 
       </article>
